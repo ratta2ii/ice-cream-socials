@@ -1,0 +1,208 @@
+html {
+    background-color: #0d1117;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0d1117 !important;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+/* Navbar tab underline (Manually Created Functionality -ERASE???*/
+.PrivateTabIndicator-colorPrimary-3 {
+    background-color: #ff0071;
+    height: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-border-before: 1px solid rgb(57, 58, 57);
+    -webkit-border-after: 1px solid rgb(57, 58, 57);
+    border-left: 1px solid rgb(57, 58, 57);
+    -webkit-border-left: 1px solid rgb(57, 58, 57);
+    border-right: 1px solid rgb(57, 58, 57);
+    -webkit-border-right: 1px solid rgb(57, 58, 57);
+    background-color: #0f1621;
+}
+
+/* ::-webkit-scrollbar-thumb {
+    min-height: 411px;
+    background: #00ffe144;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgb(39, 219, 195);
+    -webkit-box-shadow: inset 0 0 6px rgb(39, 219, 195);
+} */
+
+::-webkit-scrollbar-thumb {
+    /* Keeps all consistent on all pages (regardless of content size) */
+    min-height: 411px;
+    background: #00aeff29;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px #00aeff;
+    -webkit-box-shadow: inset 0 0 6px #29b5f6;
+}
+
+@media only screen and (max-width: 1680px) {
+    ::-webkit-scrollbar-thumb {
+        min-height: 387px
+    }
+}
+
+@media only screen and (max-width: 959px) {
+    ::-webkit-scrollbar-thumb {
+        min-height: 339px
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    ::-webkit-scrollbar-thumb {
+        min-height: 346px
+    }
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(39, 219, 195)
+}
+
+.Mui-selected {
+    border-bottom: 7px solid #ff0071 !important;
+    color: #eceff1 !important;
+    /* color: #eceff1 !important; */
+    background-color: #000000 !important;
+}
+
+.MuiSvgIcon-root {
+    width: 2em !important;
+    font-size: 2rem !important;
+}
+
+/* Mobile drawer */
+.MuiDrawer-paper {
+    width: 186px !important;
+    color: #555050 !important;
+    background-color: #000000 !important;
+}
+
+.wrap {
+    overflow-x: hidden;
+}
+
+.slideInRight {
+    animation-name: slideInRight;
+}
+
+.animated {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* TODO: Removes visual scrollbar at all times (Revisit this at a later point) */
+/* ::-webkit-scrollbar {
+    -webkit-appearance: auto;
+    width: 0; 
+  } */
+
+/* All fade-in functionality */
+.fade-in {
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

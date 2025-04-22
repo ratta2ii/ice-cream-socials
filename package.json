@@ -1,39 +1,61 @@
 {
-  "name": "ice-cream-socials",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "ice-cream-socials",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "https://icecreamsocials.com",
+    "dependencies": {
+        "@emailjs/browser": "^3.11.0",
+        "@emotion/react": "^11.10.6",
+        "@emotion/styled": "^11.10.6",
+        "@material-ui/core": "^4.12.4",
+        "@material-ui/icons": "^4.11.3",
+        "@mui/icons-material": "^5.11.16",
+        "@mui/material": "^5.12.1",
+        "@mui/styles": "^6.4.8",
+        "ajv": "^6.12.6",
+        "ajv-keywords": "^3.5.2",
+        "dotenv": "^16.0.3",
+        "final-form": "^4.20.5",
+        "gh-pages": "^5.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-final-form": "^6.5.9",
+        "react-helmet": "^6.1.0",
+        "react-router-dom": "^6.15.0",
+        "react-router-hash-link": "^2.4.3",
+        "react-scripts": "5.0.1",
+        "recursive-readdir": "^2.2.3",
+        "styled-components": "^6.1.17",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "env-cmd": "^10.1.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "deploy:prod": "env-cmd -f .env npm run build && firebase deploy"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }

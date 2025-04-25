@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/ice-cream-socials/static/css/main.fa5f1c43.css",
-    "main.js": "/ice-cream-socials/static/js/main.769af99e.js",
+    "main.js": "/ice-cream-socials/static/js/main.a183880d.js",
     "static/js/453.cbc6393c.chunk.js": "/ice-cream-socials/static/js/453.cbc6393c.chunk.js",
     "static/media/ice-cream-delivered.jpg": "/ice-cream-socials/static/media/ice-cream-delivered.2ee39dece0a900f9f60e.jpg",
     "static/media/chocolate-fountain-staffed.jpg": "/ice-cream-socials/static/media/chocolate-fountain-staffed.31e5c0e6841dc98a0046.jpg",
     "static/media/smores-buffet.jpg": "/ice-cream-socials/static/media/smores-buffet.6073d5524aad9a4eb21d.jpg",
     "index.html": "/ice-cream-socials/index.html",
     "main.fa5f1c43.css.map": "/ice-cream-socials/static/css/main.fa5f1c43.css.map",
-    "main.769af99e.js.map": "/ice-cream-socials/static/js/main.769af99e.js.map",
+    "main.a183880d.js.map": "/ice-cream-socials/static/js/main.a183880d.js.map",
     "453.cbc6393c.chunk.js.map": "/ice-cream-socials/static/js/453.cbc6393c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fa5f1c43.css",
-    "static/js/main.769af99e.js"
+    "static/js/main.a183880d.js"
   ]
 }

@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   companyLogo: {
     width: 180,
     [theme.breakpoints.down("xs")]: {
-      width: 120,
+      width: 140,
       marginRight: 8,
       opacity: 1,
     },

@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
         color: "#555050",
     },
     icons: {
-        color: "#74c2ff",
+        color: "#29b6f6",
         height: 20,
     },
     cancelIcon: {
-        color: "#74c2ff",
+        color: "#29b6f6",
         height: 23,
     },
     listItemText: {
@@ -62,8 +62,8 @@ const DrawerLinks = ({ drawerToggle }) => {
                         borderLeft: "/" === pathname ? "8px solid #ff0071" : "unset",
                         backgroundColor: "/" === pathname ? "#24313e" : "unset",
                         paddingLeft: "/" === pathname ? "8px" : "16px",
-                        paddingTop: 12,
-                        paddingBottom: 12,
+                        paddingTop: 20,
+                        paddingBottom: 20,
                     }}
                 >
                     <ListItemIcon>
@@ -80,8 +80,8 @@ const DrawerLinks = ({ drawerToggle }) => {
                         borderLeft: "/locations" === pathname ? "8px solid #ff0071" : "unset",
                         backgroundColor: "/locations" === pathname ? "#24313e" : "unset",
                         paddingLeft: "/locations" === pathname ? "8px" : "16px",
-                        paddingTop: 12,
-                        paddingBottom: 12,
+                        paddingTop: 20,
+                        paddingBottom: 20,
                     }}
                 >
                     <ListItemIcon>
@@ -113,8 +113,8 @@ const DrawerLinks = ({ drawerToggle }) => {
                         borderLeft: "/pricing" === pathname ? "8px solid #ff0071" : "unset",
                         backgroundColor: "/pricing" === pathname ? "#24313e" : "unset",
                         paddingLeft: "/pricing" === pathname ? "8px" : "16px",
-                        paddingTop: 12,
-                        paddingBottom: 12,
+                        paddingTop: 20,
+                        paddingBottom: 20,
                     }}
                 >
                     <ListItemIcon>
@@ -131,8 +131,8 @@ const DrawerLinks = ({ drawerToggle }) => {
                         borderLeft: "/contact" === pathname ? "8px solid #ff0071" : "unset",
                         backgroundColor: "/contact" === pathname ? "#24313e" : "unset",
                         paddingLeft: "/contact" === pathname ? "8px" : "16px",
-                        paddingTop: 12,
-                        paddingBottom: 12,
+                        paddingTop: 20,
+                        paddingBottom: 20,
                     }}
                 >
                     <ListItemIcon>
@@ -143,7 +143,7 @@ const DrawerLinks = ({ drawerToggle }) => {
                 <ListItem
                     button
                     key="Close"
-                    style={{ paddingTop: 12, paddingBottom: 12 }}
+                    style={{ paddingTop: 20, paddingBottom: 20 }}
                 >
                     <ListItemIcon>
                         <CancelIcon className={classes.cancelIcon} />

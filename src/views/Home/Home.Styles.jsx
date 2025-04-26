@@ -21,38 +21,8 @@ const useStyles = makeStyles((theme) => ({
       width: "unset",
       padding: "0 5%",
       marginBottom: 25,
-    },
-  },
-  profilePicGridItem: {
-    [theme.breakpoints.down("xs")]: {
-      marginLeft: 20,
-    },
-  },
-  techDisplayMainCon: {
-    // backgroundImage: `-webkit-linear-gradient(96deg, #fdfeff 81%, #0d1117 15%)`,
-    width: "100%",
-    height: 1000,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "20% 20% 10%",
-    backgroundColor: '#fefeff',
-    marginTop: 200,
-    [theme.breakpoints.down("lg")]: {
-      backgroundImage: `-webkit-linear-gradient(96deg, #fdfeff 84%, #0d1117 16%)`,
-    },
-    [theme.breakpoints.down("md")]: {
-      backgroundImage: `-webkit-linear-gradient(96deg, #fdfeff 84.5%, #0d1117 15.5%)`,
-      padding: "24% 20% 10%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      backgroundImage: `-webkit-linear-gradient(96deg, #fdfeff 86%, #0d1117 14%)`,
-      padding: "31% 20% 10%",
-    },
-    [theme.breakpoints.down("xs")]: {
-      backgroundImage: `-webkit-linear-gradient(96deg, #fdfeff 91%, #0d1117 9%)`,
-      height: 700,
-      padding: "130px 10% 10%",
+      marginTop: 20,
+      paddingBottom: 30,
     },
   },
   footerCon: {
@@ -65,8 +35,4 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default useStyles;
-
-//! Love this color #1b2027
-//! Love this color #264b73
-//! Replace all mobile bg color with this #161e28
 

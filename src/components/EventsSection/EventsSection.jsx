@@ -10,76 +10,117 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import iceCreamDelivered from "../../assets/images/ice-cream-delivered.jpg";
 import useStyles from "./EventsSection.Styles";
 
 const EventsSection = () => {
   const classes = useStyles();
 
+  // Common text content to avoid duplication
+  const textContent = (
+    <Box className={classes.textContent}>
+      <Typography variant="h4" className={classes.title}>
+        The Cream Team Experience
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        style={{ fontStyle: "italic", color: "#555", marginBottom: 8 }}
+      >
+        — Fully Staffed Ice Cream Event —
+      </Typography>
+      <Typography className={classes.subtext}>
+        Our Creamers, dressed in vintage Soda Jerk attire, deliver a sundae
+        service as elegant as it is fun. We bring the charm of an old-school soda
+        fountain to your modern event, complete with upscale decor.
+      </Typography>
+      <List className={classes.bulletList}>
+        {[
+          "Personalized sundaes served by our professional Cream Team",
+          "Elegant black tablecloths, classic décor, and full sundae station",
+          "8 premium ice cream flavors, including a non-dairy Italian Ice option",
+          "Full bar of toppings: fudge, sprinkles, fruit, whipped cream & more",
+          "Perfect for corporate events, weddings, and upscale parties",
+        ].map((item, i) => (
+          <ListItem key={i} className={classes.listItem}>
+            <ListItemIcon>
+              <CheckCircleIcon className={classes.icon} />
+            </ListItemIcon>
+            <ListItemText primary={item} />
+          </ListItem>
+        ))}
+      </List>
+      <Box className={classes.buttonGroup}>
+        <Button
+          variant="contained"
+          color="primary"
+          className={classes.ctaButton}
+          aria-label="Learn more about The Cream Team Experience"
+        >
+          Learn More
+        </Button>
+        <Button
+          variant="outlined"
+          color="primary"
+          className={classes.secondaryButton}
+          aria-label="Get a quote for The Cream Team Experience"
+        >
+          Get a Quote
+        </Button>
+      </Box>
+    </Box>
+  );
+
+  // Common image content to avoid duplication
+  const imageContent = (
+    <Box className={classes.imageWrapper} style={{ textAlign: "center" }}>
+      <img
+        src="https://images.pexels.com/photos/461430/pexels-photo-461430.jpeg"
+        alt="Staffed Event"
+        className={classes.oblongImage}
+      />
+      <Box mt={2} mb={1}>
+        {Array.from({ length: 5 }).map((_, i) => (
+          <span key={i} className={classes.starIcon} >
+            ★
+          </span>
+        ))}
+      </Box>
+    </Box>
+  );
+
   return (
     <>
-      {/* Fully Staffed Section (image on right) */}
+      {/* Fully Staffed Section (Responsive Layout) */}
       <Box className={classes.sectionDark}>
-        <Grid container spacing={4} alignItems="center" justifyContent="center">
-          {/* Text on left */}
-          <Grid item xs={12} md={6}>
-            <Box className={classes.textContent}>
-              <Typography variant="h4" className={classes.title}>
-                Fully Staffed Events
-              </Typography>
-              <Typography className={classes.subtext}>
-                Let our trained “Socialites” bring smiles and sundaes to your next event:
-              </Typography>
-              <List className={classes.bulletList}>
-                {[
-                  "Sundaes in 12oz bowls, waffle cones, or waffle bowls",
-                  "Friendly, uniformed attendants serve your guests",
-                  "10 Thrifty flavors + non-dairy Italian Ice",
-                  "Sundae bar with warm fudge, sprinkles & more",
-                  "Decor, tables, linens, jukebox — all included",
-                ].map((item, i) => (
-                  <ListItem key={i} className={classes.listItem}>
-                    <ListItemIcon>
-                      <CheckCircleIcon className={classes.icon} />
-                    </ListItemIcon>
-                    <ListItemText primary={item} />
-                  </ListItem>
-                ))}
-              </List>
-              <Box className={classes.buttonGroup}>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={classes.ctaButton}
-                  aria-label="Learn more about Fully Staffed Events"
-                >
-                  Learn More
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  className={classes.secondaryButton}
-                  aria-label="Get a quote for Fully Staffed Events"
-                >
-                  Get a Quote
-                </Button>
-              </Box>
-            </Box>
+        {/* Mobile Layout: Image on top (xs, sm) */}
+        <Grid
+          container
+          spacing={4}
+          alignItems="center"
+          justifyContent="center"
+          className={classes.mobileLayout}
+        >
+          <Grid item xs={12} className={classes.imageColDark}>
+            {imageContent}
           </Grid>
+          <Grid item xs={12}>
+            {textContent}
+          </Grid>
+        </Grid>
 
-          {/* Image on right */}
+        {/* Desktop Layout: Image on right (md+) */}
+        <Grid
+          container
+          spacing={4}
+          alignItems="center"
+          justifyContent="center"
+          className={classes.desktopLayout}
+        >
+          <Grid item xs={12} md={6}>
+            {textContent}
+          </Grid>
           <Grid item xs={12} md={6} className={classes.imageColDark}>
-            <Box className={classes.imageWrapper} style={{ textAlign: "center" }}>
-              <img
-                src="https://images.pexels.com/photos/461430/pexels-photo-461430.jpeg"
-                alt="Staffed Event"
-                className={classes.oblongImage}
-              />
-              <Box mt={2} mb={1}>
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} style={{ fontSize: "2rem", color: "#FFD700", margin: "0 4px" }}>★</span>
-                ))}
-              </Box>
-            </Box>
+            {imageContent}
           </Grid>
         </Grid>
       </Box>
@@ -91,13 +132,18 @@ const EventsSection = () => {
           <Grid item xs={12} md={6} className={classes.imageColLight}>
             <Box className={classes.imageWrapper} style={{ textAlign: "center" }}>
               <img
-                src="https://picsum.photos/seed/dropoff/600/400"
+                src={iceCreamDelivered}
                 alt="Drop-off setup"
                 className={classes.oblongImage}
               />
               <Box mt={2} mb={1}>
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} style={{ fontSize: "2rem", color: "#FFD700", margin: "0 4px" }}>★</span>
+                  <span
+                    key={i}
+                    className={classes.starIcon}
+                  >
+                    ★
+                  </span>
                 ))}
               </Box>
             </Box>
@@ -107,18 +153,26 @@ const EventsSection = () => {
           <Grid item xs={12} md={6}>
             <Box className={classes.textContent}>
               <Typography variant="h4" className={classes.title}>
-                Drop-Off Sundae Bar Setup
+                Sundae Social Drop-Off
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                style={{ fontStyle: "italic", color: "#555", marginBottom: 8 }}
+              >
+                — Self-Serve Ice Cream Station —
               </Typography>
               <Typography className={classes.subtext}>
-                All the fun without the staff — our drop-off social is the perfect self-serve solution:
+                Our top-notch Cream Team delivers and sets up a stunning sundae bar, then slip away,
+                leaving you with a sleek, self-serve dessert experience brimming with modern
+                elegance and flavor.
               </Typography>
               <List className={classes.bulletList}>
                 {[
-                  "12oz sundaes with lids, pre-labeled",
-                  "Delivered in dry ice coolers (yours to keep)",
-                  "10 ice cream flavors including sugar-free & non-dairy",
-                  "Includes all toppings, syrups, spoons & napkins",
-                  "Trained delivery by our uniformed Socialites",
+                  "Expertly arranged sundae station, set up by our skilled Cream Team",
+                  "Sleek modern decor, polished setup, and a complete dessert bar",
+                  "8 premium ice cream flavors, including a non-dairy sorbet option",
+                  "Abundant toppings bar: caramel, nuts, berries, whipped cream, and more",
+                  "Ideal for birthdays, casual gatherings, and effortless celebrations",
                 ].map((item, i) => (
                   <ListItem key={i} className={classes.listItem}>
                     <ListItemIcon>
@@ -133,7 +187,7 @@ const EventsSection = () => {
                   variant="contained"
                   color="primary"
                   className={classes.ctaButton}
-                  aria-label="Learn more about Drop-Off Sundae Bar Setup"
+                  aria-label="Learn more about Sundae Social Drop-Off"
                 >
                   Learn More
                 </Button>
@@ -141,7 +195,7 @@ const EventsSection = () => {
                   variant="outlined"
                   color="primary"
                   className={classes.secondaryButton}
-                  aria-label="Get a quote for Drop-Off Sundae Bar Setup"
+                  aria-label="Get a quote for Sundae Social Drop-Off"
                 >
                   Get a Quote
                 </Button>

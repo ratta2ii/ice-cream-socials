@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/ice-cream-socials/static/css/main.f4011d89.css",
-    "main.js": "/ice-cream-socials/static/js/main.f94f6299.js",
+    "main.css": "/ice-cream-socials/static/css/main.f9bb02dd.css",
+    "main.js": "/ice-cream-socials/static/js/main.4871995a.js",
     "static/js/453.cbc6393c.chunk.js": "/ice-cream-socials/static/js/453.cbc6393c.chunk.js",
     "static/media/ice-cream-delivered.jpg": "/ice-cream-socials/static/media/ice-cream-delivered.2ee39dece0a900f9f60e.jpg",
+    "static/media/binary.jpeg": "/ice-cream-socials/static/media/binary.ffad56292d6e8a6a6a4e.jpeg",
     "static/media/chocolate-fountain-staffed.jpg": "/ice-cream-socials/static/media/chocolate-fountain-staffed.31e5c0e6841dc98a0046.jpg",
+    "static/media/ice-cream-truck.jpg": "/ice-cream-socials/static/media/ice-cream-truck.7369cb595f7e5c64a953.jpg",
+    "static/media/ice-cream-truck-two.jpg": "/ice-cream-socials/static/media/ice-cream-truck-two.7ece8f1aee1bb1b20af5.jpg",
     "static/media/smores-buffet.jpg": "/ice-cream-socials/static/media/smores-buffet.6073d5524aad9a4eb21d.jpg",
     "index.html": "/ice-cream-socials/index.html",
-    "main.f4011d89.css.map": "/ice-cream-socials/static/css/main.f4011d89.css.map",
-    "main.f94f6299.js.map": "/ice-cream-socials/static/js/main.f94f6299.js.map",
+    "main.f9bb02dd.css.map": "/ice-cream-socials/static/css/main.f9bb02dd.css.map",
+    "main.4871995a.js.map": "/ice-cream-socials/static/js/main.4871995a.js.map",
     "453.cbc6393c.chunk.js.map": "/ice-cream-socials/static/js/453.cbc6393c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4011d89.css",
-    "static/js/main.f94f6299.js"
+    "static/css/main.f9bb02dd.css",
+    "static/js/main.4871995a.js"
   ]
 }

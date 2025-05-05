@@ -13,6 +13,10 @@ body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    padding-right: 0 !important;
+}
+body.Mui-open {
+    padding-right: 0 !important;
 }
 
 code {
@@ -20,7 +24,6 @@ code {
         monospace;
 }
 
-/* Navbar tab underline (Manually Created Functionality -ERASE???*/
 .PrivateTabIndicator-colorPrimary-3 {
     background-color: #ff0071;
     height: 5px;
@@ -40,17 +43,7 @@ code {
     background-color: #0f1621;
 }
 
-/* ::-webkit-scrollbar-thumb {
-    min-height: 411px;
-    background: #00ffe144;
-    border-radius: 10px;
-    box-shadow: inset 0 0 6px rgb(39, 219, 195);
-    -webkit-box-shadow: inset 0 0 6px rgb(39, 219, 195);
-} */
-
-
 ::-webkit-scrollbar-thumb {
-    /* Keeps all consistent on all pages (regardless of content size) */
     min-height: 411px;
     background: #6d326754;
     border-radius: 10px;
@@ -83,7 +76,6 @@ code {
 .Mui-selected {
     border-bottom: 7px solid #ff0071 !important;
     color: #eceff1 !important;
-    /* color: #eceff1 !important; */
     background-color: #000000 !important;
 }
 
@@ -92,7 +84,6 @@ code {
     font-size: 2rem !important;
 }
 
-/* Mobile drawer */
 .MuiDrawer-paper {
     width: 186px !important;
     color: #555050 !important;
@@ -123,13 +114,6 @@ code {
     }
 }
 
-/* TODO: Removes visual scrollbar at all times (Revisit this at a later point) */
-/* ::-webkit-scrollbar {
-    -webkit-appearance: auto;
-    width: 0; 
-  } */
-
-/* All fade-in functionality */
 .fade-in {
     animation: fadeIn ease 10s;
     -webkit-animation: fadeIn ease 10s;
@@ -205,5 +189,25 @@ code {
 
     100% {
         opacity: 1;
+    }
+}
+
+/* DISABLE slideInRight & fade-in for sm and below */
+@media only screen and (max-width: 959px) {
+    .slideInRight {
+        animation-name: none !important;
+    }
+
+    .animated {
+        animation-duration: 0s !important;
+        animation-fill-mode: none !important;
+    }
+
+    .fade-in {
+        animation: none !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
     }
 }

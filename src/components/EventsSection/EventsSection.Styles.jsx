@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 10,
         color: "#1b2027",
         [theme.breakpoints.down("sm")]: {
-            fontSize: "1.6rem",
+            fontSize: "2.2rem",
         },
     },
     subtext: {
@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     icon: {
-        color: "#66bb6a",
+        color: "#66bb6a",     
     },
     buttonGroup: {
         display: "flex",
@@ -154,10 +154,8 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "2rem",
         color: "#FFD700",
         margin: "0 4px",
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "unset",
-            color: "unset",
-            margin: "unset",
+        [theme.breakpoints.down("sm")]: {
+            display: "none",
         },
     }
 }));

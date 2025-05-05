@@ -9,7 +9,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     root: {
         width: "100%",
-        height: "100%",
+        height: "auto",
+        maxHeight: 300,
         color: "#eceff1",
     },
     customerCommentGridItm: {
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: 450,
+        height: 350,
         textAlign: "justify",
         color: "#efefef",
         fontFamily: "emoji",
@@ -52,18 +53,19 @@ const useStyles = makeStyles((theme) => ({
     reference: {
         fontFamily: "emoji",
         fontSize: 18,
+        lineHeight: 1.3,
+        marginTop: 15,
     },
     signatureCon: {
         height: 30,
         textAlign: "right",
         width: "100%",
-        marginTop: 20,
+        marginTop: 10,
         fontFamily: "emoji",
         fontSize: 17,
         color: "#efefef",
         [theme.breakpoints.down("md")]: {
             textAlign: "right",
-            marginTop: 10,
         },
         [theme.breakpoints.down("xs")]: {
             marginTop: 5,
@@ -118,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         alignItems: "flex-start",
         justifyContent: "center",
-        height: 450,
+        height: 350,
         textAlign: "left",
         color: "#efefef",
         fontFamily: "emoji",
@@ -200,11 +202,11 @@ const Footer = (props) => {
             {/* Right Grid Item */}
             <Grid item xs={12} lg={6} className={classes.aboutMeCardGridItm}>
                 <Box className={classes.cardBox}>
-                    <img
+                    {/* <img
                         className={classes.companyLogo}
                         src={CompanyLogo}
                         alt="Ice Cream Socialables Company Logo"
-                    />
+                    /> */}
                     <Box className={classes.infoLine}>
                         <i className={`fas fa-envelope ${classes.infoIcon}`}></i>
                         <Typography className={classes.infoText}>
@@ -225,16 +227,22 @@ const Footer = (props) => {
                         <i className={`fas fa-paper-plane ${classes.infoIcon}`}></i>
                         <Typography className={classes.infoText}>
                             <a href="/contact" style={{ color: "#efefef", textDecoration: "underline", fontSize: 18 }}>
-                                Contact Us
+                                Get a Quote Now
                             </a>
                         </Typography>
                     </Box>
                 </Box>
             </Grid>
             <Grid item className={classes.copyrightGridItm}>
-                <Typography className={classes.copyrightSig}>
-                    Presented By icecreamsocialables.com © 2025
-                </Typography>
+                <Box className={classes.copyrightSig}>
+                    Presented By{" "}
+                    <img
+                        src={CompanyLogo}
+                        alt="Ice Cream Sociables"
+                        style={{ height: "2.2em", verticalAlign: "middle" }}
+                    />{" "}
+                    © 2025
+                </Box>
             </Grid>
         </Grid>
     );

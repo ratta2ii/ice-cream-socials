@@ -4,14 +4,14 @@ import Drawer from "@material-ui/core/Drawer";
 import Box from "@material-ui/core/Box";
 import DrawerLinks from "./DrawerLinks";
 import AppBarCom from "./AppBarCom";
+import Binary from "./../../assets/images/binary.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
         height: 130,
         display: "flex",
-        backgroundImage:
-            "linear-gradient(rgba(13, 17, 23, 0.5), rgba(13, 17, 23, 0.5)), url('binary.jpeg')",
+        backgroundImage: `linear-gradient(rgba(13, 17, 23, 0.5), rgba(13, 17, 23, 0.5)), url(${Binary})`,
         backgroundSize: "contain",
         borderBottom: "17px solid rgba(14, 18, 24, .7)",
         backgroundPositionY: -279,
@@ -20,9 +20,6 @@ const useStyles = makeStyles((theme) => ({
             backgroundPositionY: -282,
         },
         [theme.breakpoints.down("xs")]: {
-            // backgroundImage:
-            //     "linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)), url('binary.jpeg')",
-            // backgroundSize: "unset",
             backgroundImage: 'none',
             height: 105,
             width: "100vw",

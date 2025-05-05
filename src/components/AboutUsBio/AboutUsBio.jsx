@@ -9,7 +9,7 @@ const AboutUsBio = () => {
     return (
         <Grid item>
             <Box className="slideInRight animated">
-                <Typography className={classes.title}>Ice Cream Socialables</Typography>
+                <Typography className={classes.title}>Ice Cream Sociables</Typography>
                 {/* <img src={CompanyLogo} alt="Ice Cream Socials Logo" className={classes.logo} /> */}
             </Box>
             <Box className={`slideInRight animated ${classes.bio}`}>

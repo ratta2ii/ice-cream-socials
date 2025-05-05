@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("xs")]: {
             gap: 40,
             padding: "40px 0",
+            animation: "none", // Turn off fadeIn animation on small screens
         },
     },
     imageFrame: {
@@ -24,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     oblongImage: {
         width: "100%",
         height: "auto",
-        // borderRadius: "30% / 20%",
         borderRadius: 10,
         boxShadow: "0 6px 20px rgba(255, 255, 255, 0.08)",
         border: "3px solid rgba(255, 255, 255, 0.2)",
